@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas exercice 1</title>
+    <meta http-equiv="refresh" content="2; URL=index.html" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="draw" width="400px" height="400px"></canvas>
+    <script>
+      var c = document.getElementById('draw');
+      var ctx = c.getContext('2d');
+      ctx.beginPath(); // ?
+      // Grand carré
+      ctx.moveTo(50,150);//50 de marge-left et 50 de height
+      ctx.lineTo(200,150);
+      ctx.lineTo(200,350);
+      ctx.lineTo(50,350);
+      ctx.lineTo(50,150);
+      ctx.fillStyle = '#A1D8E6';
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      // Petit carré gauche
+      ctx.beginPath();
+      ctx.moveTo(70,170);//Position du point
+      ctx.lineTo(100,170);//Jusqu'a ..
+      ctx.lineTo(100,200);
+      ctx.lineTo(70,200);
+      ctx.lineTo(70,170);
+      ctx.fillStyle = '#C9C9C9';
+      ctx.fill()
+      ctx.stroke();
+      ctx.closePath();
+      // Petit carré droit
+      ctx.beginPath();
+      ctx.moveTo(180,170);
+      ctx.lineTo(180,200);
+      ctx.lineTo(150,200);
+      ctx.lineTo(150,170);
+      ctx.lineTo(180,170);
+      ctx.fillStyle = '#C9C9C9';
+      ctx.fill()
+      ctx.stroke();
+      ctx.closePath();
+      // Porte
+      ctx.beginPath();
+      ctx.moveTo(110,300);
+      ctx.lineTo(110,350);
+      ctx.moveTo(110,300);
+      ctx.lineTo(140,300);
+      ctx.lineTo(140,350);
+      ctx.lineTo(110,350);
+      ctx.fillStyle = '#C9C9C9';
+      ctx.fill()
+      ctx.stroke();
+      ctx.closePath();
+      // Toit
+      ctx.beginPath();
+      ctx.moveTo(50,150);
+      ctx.lineTo(130,50);
+      ctx.lineTo(200,150)
+      ctx.fillStyle = '#D7823D';
+      ctx.fill()
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
